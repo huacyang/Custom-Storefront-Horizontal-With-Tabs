@@ -1,0 +1,46 @@
+<div id="header">
+	<img id="header-image" src="images/logo.png"/>
+	<div id="header-label">we.HEALTHCARE</div>
+
+	<div id="header-button-container">
+		<div id="header-subscribe-button" class="header-button"
+			ng-click="registerButton_clickHandler()"
+			ng-show="isDisplayRegisterButton">REGISTER</div>
+		<!-- <div id="header-subscribe-button" class="header-button"
+			ng-click="subscribeButton_clickHandler()"
+			ng-show="isDisplaySubscribeButton">SUBSCRIBE</div> -->
+		<div id="header-sign-in-button" class="header-button"
+			ng-click="signIn_clickHandler()"
+			ng-show="isEntitlementViewer"
+			ng-bind="signInLabel"></div>
+	</div>
+</div>
+<div
+	id="sfdc-banner"
+	class="ng-cloak"
+	ng-show="isSFDCEnabled"
+	sfdc-banner></div>
+
+<tabset>
+	<tab
+		ng-repeat="tab in tabs"
+		heading="{{tab.label}}"	
+		ng-model="selectedIndex"
+		select="tabSelectHandler(tab)"
+		active="tab.active">
+		<div
+			class="grid"
+			folio-item-view-grid>
+			<div
+				class="folio-item-view"
+				folio-item-view
+				ng-repeat="folio in tab.visibleFolios">
+			</div>
+			<div id="folio-row-loading-spacer"
+				ng-hide="tab.visibleFolios.length == tab.foliosDeferred.length">&nbsp;</div>
+		</div>
+	</tab>
+
+</tabset>
+
+<div preview-dialog></div>

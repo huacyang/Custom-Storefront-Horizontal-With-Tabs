@@ -1,0 +1,412 @@
+@font-face {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 400;
+	src: url("fonts/Montserrat-Regular.ttf");
+}
+
+body {
+	color: #2a3744;
+	margin: 0px;
+	font-family: Montserrat;
+	background: url('images/grid_background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+#header {
+	background-color: rgba(255,255,255,0.1);
+	position: relative;
+	height: 70px;
+	color: #ffffff;
+}
+
+#header-image {
+	position: absolute;
+	left: 30px;
+	-webkit-transform: translateY(-50%);
+	top: 50%;
+	display: block;
+}
+
+#header-label {
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	font-weight: bold;
+	display: none;
+}
+
+#header-button-container {
+	white-space: nowrap;
+	position: absolute;
+	top: 20px;
+	right: 30px;
+}
+
+.header-button {
+	font-size: 12px;
+	display: inline-block;
+	border: 1px solid #ffffff;
+	border-radius: 20px;
+	padding: 10px 20px;
+	color: #ffffff;
+}
+
+.header-button:active {
+	opacity: .5;
+}
+
+#header-sign-in-button {
+	margin-left: 10px;
+}
+
+#sfdc-banner {
+	background-color: rgba(255,255,255,.2);
+	padding: 10px 30px;
+	min-height: 45px;
+	color: #ffffff;
+	font-size: 12px;
+	position: relative;
+}
+
+#sfdc1-button {
+	position: relative;
+	top: -9px;
+}
+
+#sfdc1-button, .sfdc-button {
+	float: right;
+}
+
+#sales-force-logo {
+	position: relative;
+	top: 7px;
+}
+
+.sfdcUser {
+	display: inline;
+	margin-left: 10px;
+}
+
+.sfdc-button {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 15px;
+}
+
+.sfdc-row {
+	white-space: nowrap;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 5px;
+}
+
+#account-fields-container {
+	height:60px;
+	position: relative;
+}
+
+.account-field-container {
+	-webkit-box-sizing: border-box;
+	width: 30%;
+	position: absolute;
+	font-size: 12px;
+}
+
+.account-field-container:nth-child(1) {
+	top: 20px;
+	left: 0px;
+}
+
+.account-field-container:nth-child(2) {
+	top: 20px;
+	-webkit-transform: translateX(-50%);
+	left: 50%;
+}
+
+.account-field-container:nth-child(3) {
+	top: 20px;
+	right: 0px;
+}
+
+.account-field {
+	background-color: rgba(255,255,255, .2);
+	border-radius: 20px;
+	padding: 5px 10px;
+	-webkit-box-sizing: border-box;
+}
+
+#record-button {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 20px;
+	margin-left: 20px;
+}
+
+#recording-status-container {
+	position: absolute;
+	right: 30px;
+	bottom: 15px;
+}
+
+#sfdcFeedback, #record-button, #recordings, .recordingsLabel {
+	display: inline-block;
+}
+
+/* The background color of the tabs. */
+.nav-tabs {
+	background-color: rgba(255,255,255,0.1);
+	padding-left:5px;
+}
+
+li a, li a:hover, .nav-tabs>li.active>a, .nav>li>a  {
+	padding: 5px 25px;
+	font-size: 14px;
+}
+
+li a {
+	color: #ffffff;
+}
+
+.nav>li>a {
+	position: relative;
+	top: -2px;
+}
+
+.nav-tabs>li.active>a,.nav-tabs>li.active>a:hover,.nav-tabs>li.active>a:focus {
+	color: #ffffff;
+	cursor:default;
+	border-bottom: 3px solid #124041;
+	border-left-style: none;
+	border-right-style: none;
+	border-top-style: none;
+	position: relative;
+	top: -1px;
+}
+
+.folio-container {
+	-webkit-box-sizing: border-box;
+	margin: 0px 0px;
+	width: 100%;
+	overflow-x: off;
+	overflow-y: auto;
+}
+
+.tab-pane, #tab-grid {
+	overflow-y: scroll; /* has to be scroll, not auto */
+  	-webkit-overflow-scrolling: touch;
+}
+
+.grid {
+	-webkit-box-sizing: border-box;
+	margin-top: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.folio-item-view {
+	-webkit-box-sizing: border-box;
+	width: 50%;
+	float: left;
+	padding: 0 10px;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.folio-item-view-img {
+	display: inline-block;
+	width: 100%;
+}
+
+.folio-item-view-text-container {
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px 0px 0px 0px;
+	width: 100% !important;
+}
+
+.folio-item-view-folio-title, .folio-item-view-folio-number {
+	-webkit-box-sizing: border-box;
+	width: 100%;
+}
+
+.folio-item-view-folio-title {
+	font-size: 14px;
+ 	color: #ffffff;
+}
+
+.folio-item-view-folio-number {
+	font-size: 13px;
+ 	color: #aaaaaa;
+}
+
+.folio-item-view-state {
+	font-size: 13px;
+ 	color: #aaaaaa;
+ 	font-style: italic;
+ 	position: absolute;
+ 	bottom: 10px;
+}
+
+.folio-item-view-buy-button {
+	position: absolute;
+}
+
+.button {
+	 -webkit-box-sizing: border-box;
+	background-color: #47a192;
+	color: #ffffff;
+	font-size: 13px;
+	bottom: 0px;
+	padding: 10px 20px;
+	border-radius: 20px;
+	text-align: center;
+	right: 10px;
+}
+
+.button:active {
+	opacity: .8;
+}
+
+.resume-cancel-button {
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+	font-size: 17px;
+	color: #47a192;
+}
+
+.resume-cancel-button:active {
+	opacity: .8;
+}
+
+.folio-item-view-progress-bar-container {
+	-webkit-box-sizing: border-box;
+	position: absolute;
+	left: 0px;
+	height: 4px;
+	width: 100%;
+}
+
+.folio-item-view-progress-bar {
+	background-color: rgba(255, 255, 255, .3);
+	height: 4px;
+}
+
+.download-button {
+	background-image: url('images/download.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+#folio-row-loading-spacer {
+	width: 100%;
+	height: 50px;
+}
+
+.tab-content {
+	overflow: auto;
+}
+
+.modal-background-grey {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+}
+
+#preview-dialog {
+	border: 10px solid rgba(255,255,255, .3);
+	-webkit-background-clip: padding-box;
+	background-color: #ffffff;
+	padding: 30px;
+	width: 530px;
+	position: absolute;
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	top: 50%;
+	left: 50%;
+}
+
+#preview-dialog-close-button {
+	top: 20px;
+	right: 20px;
+	color: #47a192;
+	font-weight: bold;
+	position: absolute;
+	font-size: 25px;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	line-height: 15px;
+}
+
+#preview-dialog-close-button:active {
+	opacity: .8;
+}
+
+#preview-dialog-top-row {
+	white-space: nowrap;
+	margin-bottom: 30px;
+}
+
+#preview-dialog-folio-cover {
+	overflow: hidden;
+	float: left;
+	margin-right: 30px;
+	width: 170px;
+}
+
+#preview-dialog-right-column {
+	width: auto;
+	vertical-align: top;
+}
+
+#preview-dialog-title {
+	color: #333;
+	font-size: 20px;
+}
+
+#preview-dialog-folio-number {
+    color: #666;
+	font-size: 16px;
+}
+
+#preview-dialog-description {
+    color: #666;
+    font-size: 12px;
+    padding-top: 30px;
+    clear: both;
+}
+
+#preview-dialog .button {
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+#preview-dialog .button:active {
+	opacity: .8;
+}
+
+#debug {
+	opacity: .9;
+	width: 200px;
+	height: 300px;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	z-index: 99999;
+}

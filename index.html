@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+<title>Library</title>
+
+<link rel="stylesheet" href="libs/bootstrap.min.css">
+
+<style type="text/css">
+#spinner-container {
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	position: absolute;
+	z-index: 9;
+}
+
+#inner-spinner-container {
+	font-family: helvetica neue;
+	width: 400px;
+	height: 30px;
+	position: absolute;
+	left: 50%;
+	margin-left: -200px;
+	font-size: 16px;
+	top: 50%;
+	margin-top: -70px;
+	text-align: center;
+}
+</style>
+
+<script src="libs/angular.1.2.8.js"></script>
+<script src="libs/ui-bootstrap-tpls-0.11.0.min.js"></script>
+
+<!-- Eliminates 300ms delay on device. -->
+<script src="libs/fastclick.min.js"></script>
+
+<!-- Loading spinner. -->
+<script src="libs/spin.min.js"></script>
+
+<!-- The library/store API. Comment this out when testing on the desktop. -->
+<script src="libs/AdobeLibraryAPI.2.32.min.js"></script>
+
+<!-- The main js file that loads the rest of the JavaScript and CSS files.
+	 main.js dynamically loads body.html so updates can be made for hosted
+	 files without having to create a new viewer.
+-->
+<script src="main.js" type="text/javascript"></script>
+</head>
+<body ng-controller="MainController" ontouchstart="">
+<div id="spinner-container" ng-hide="isFoliosLoaded">
+	<div id="inner-spinner-container">
+		<div id="loading-label">Loading...</div>
+		<div id="spinner" class="spinner"></div>
+	</div>
+</div>
+</body>
+</html>
