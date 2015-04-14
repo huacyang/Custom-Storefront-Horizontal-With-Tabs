@@ -162,7 +162,7 @@ app.controller("MainController", function($scope, $rootScope, $filter, folioServ
 	}
 
 	$scope.registerButton_clickHandler = function() {
-		adobeDPS.dialogService.openExternal('http://www.google.com/');
+		adobeDPS.dialogService.open('http://www.google.com/');
 	}
 
 	$scope.subscribeButton_clickHandler = function() {

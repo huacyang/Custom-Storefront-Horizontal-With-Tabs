@@ -95,7 +95,7 @@ app.directive("folioItemView", function($rootScope, $compile) {
 
 			function loadPreviewImage() {
 				// Load the preview image.
-				var transaction = folio.getPreviewImage(120, 160, true);
+				var transaction = folio.getPreviewImage(120, 160, false);
 				transaction.completedSignal.addOnce(function(transaction) {
 					if (transaction.state == adobeDPS.transactionManager.transactionStates.FINISHED && transaction.previewImageURL != null) {
 						$thumbnail.attr("src", transaction.previewImageURL);
